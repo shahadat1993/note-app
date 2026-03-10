@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | NotesPro</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="shortcut icon" href="./assets/images/download.jpeg" type="image/x-icon">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script type="module" src="./assets/js/settings.js" defer></script>
+</head>
+<body class="bg-slate-950 text-white">
+  <div class="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.14),transparent_25%),linear-gradient(to_bottom,#020617,#0f172a)]">
+    <div class="container-fluid">
+      <div class="row min-vh-100">
+
+        <aside class="col-12 col-lg-3 col-xl-2 border-end border-white/10 bg-slate-900/70 backdrop-blur-xl p-0">
+          <div class="d-flex flex-column h-100 p-4">
+            <div class="mb-4">
+              <h2 class="h4 fw-bold mb-1">NotesPro</h2>
+              <p class="text-slate-400 mb-0">Account Management</p>
+            </div>
+
+            <nav class="d-flex flex-column gap-2">
+              <a href="./dashboard.html" class="btn text-start rounded-4 border border-white/10 py-3 text-white bg-white/5">
+                Dashboard
+              </a>
+              <a href="./settings.html" class="btn text-start rounded-4 border-0 py-3 text-white bg-violet-500/20">
+                Settings
+              </a>
+            </nav>
+
+            <div class="mt-auto pt-4">
+              <div class="rounded-4 border border-white/10 bg-white/5 p-4">
+                <h6 class="fw-semibold mb-2">Security First</h6>
+                <p class="text-slate-300 small mb-0">
+                  Keep your personal information updated and use a strong password.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-12 col-lg-9 col-xl-10 p-4 p-md-5">
+          <div class="d-flex flex-column gap-4">
+
+            <section class="rounded-4 border border-white/10 bg-white/5 p-4 p-md-5 shadow-lg backdrop-blur">
+              <span class="inline-flex rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-2 text-sm text-violet-200">
+                Account Settings
+              </span>
+              <h1 class="mt-3 text-4xl font-bold">Manage your account professionally</h1>
+              <p class="mt-3 text-slate-300 text-lg leading-8 mb-0">
+                Update profile details and secure your account from one dedicated settings page.
+              </p>
+            </section>
+
+            <div class="row g-4">
+              <div class="col-12 col-xl-6">
+                <section class="h-100 rounded-4 border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur">
+                  <div class="mb-4">
+                    <h2 class="h4 fw-bold mb-1">Profile Information</h2>
+                    <p class="text-slate-400 mb-0">Update your basic account details.</p>
+                  </div>
+
+                  <form id="profileForm" class="space-y-4">
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">Full Name</label>
+                      <input
+                        name="name"
+                        type="text"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">Email Address</label>
+                      <input
+                        name="email"
+                        type="email"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn w-100 rounded-4 border-0 py-3 fw-semibold text-white shadow-lg"
+                      style="background: linear-gradient(135deg, #7c3aed, #9333ea);"
+                    >
+                      Update Profile
+                    </button>
+                  </form>
+                </section>
+              </div>
+
+              <div class="col-12 col-xl-6">
+                <section class="h-100 rounded-4 border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur">
+                  <div class="mb-4">
+                    <h2 class="h4 fw-bold mb-1">Change Password</h2>
+                    <p class="text-slate-400 mb-0">Keep your account secure with a stronger password.</p>
+                  </div>
+
+                  <form id="passwordForm" class="space-y-4">
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">Current Password</label>
+                      <input
+                        name="currentPassword"
+                        type="password"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">New Password</label>
+                      <input
+                        name="newPassword"
+                        type="password"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn w-100 rounded-4 border-0 py-3 fw-semibold text-white shadow-lg"
+                      style="background: linear-gradient(135deg, #10b981, #059669);"
+                    >
+                      Update Password
+                    </button>
+                  </form>
+                </section>
+              </div>
+            </div>
+
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

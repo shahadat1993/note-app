@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | NotesPro</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="shortcut icon" href="./assets/images/download.jpeg" type="image/x-icon">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script type="module" src="./assets/js/dashboard.js" defer></script>
+</head>
+<body class="bg-slate-950 text-white">
+  <div class="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.14),transparent_25%),linear-gradient(to_bottom,#020617,#0f172a)]">
+    <div class="container-fluid">
+      <div class="row min-vh-100">
+
+        <aside class="col-12 col-lg-3 col-xl-2 border-end border-white/10 bg-slate-900/70 backdrop-blur-xl p-0">
+          <div class="d-flex flex-column h-100 p-4">
+            <div class="mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="rounded-4 bg-violet-500/20 p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-violet-300" viewBox="0 0 16 16">
+                    <path d="M9.828 4a.5.5 0 0 1 .354.146l2.672 2.672a.5.5 0 0 1 0 .707l-5.5 5.5A.5.5 0 0 1 7 13.5H4.5a.5.5 0 0 1-.5-.5V10.5a.5.5 0 0 1 .146-.354l5.5-5.5A.5.5 0 0 1 9.828 4"/>
+                    <path d="M11.207 2.5a1 1 0 0 1 1.414 0l.879.879a1 1 0 0 1 0 1.414l-.793.793-2.293-2.293z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="h4 mb-0 fw-bold">NotesPro</h2>
+                  <small class="text-slate-400">Workspace Platform</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-4 border border-white/10 bg-white/5 p-3 mb-4">
+              <p class="mb-1 text-sm text-slate-400">Signed in as</p>
+              <h6 class="mb-0 fw-semibold text-white" id="userName">User</h6>
+            </div>
+
+            <nav class="d-flex flex-column gap-2">
+              <a href="./dashboard.html" class="btn text-start rounded-4 border-0 py-3 text-white bg-violet-500/20">
+                Dashboard
+              </a>
+              <a href="./settings.html" class="btn text-start rounded-4 border border-white/10 py-3 text-white bg-white/5">
+                Settings
+              </a>
+              <button id="logoutBtn" class="btn text-start rounded-4 border border-red-400/20 py-3 text-red-200 bg-red-500/10">
+                Logout
+              </button>
+            </nav>
+
+            <div class="mt-auto pt-4">
+              <div class="rounded-4 border border-white/10 bg-gradient-to-br from-violet-500/15 to-emerald-500/10 p-4">
+                <h6 class="fw-semibold mb-2">Upgrade Your Workflow</h6>
+                <p class="text-slate-300 small mb-0">
+                  Manage notes, organize ideas, and keep your workspace clean and scalable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-12 col-lg-9 col-xl-10 p-4 p-md-5">
+          <div class="d-flex flex-column gap-4">
+
+            <section class="rounded-4 border border-white/10 bg-white/5 p-4 p-md-5 shadow-lg backdrop-blur">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                  <span class="inline-flex rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-2 text-sm text-violet-200">
+                    Notes Dashboard
+                  </span>
+                  <h1 class="mt-3 text-4xl font-bold">Your personal knowledge workspace</h1>
+                  <p class="mt-3 text-slate-300 text-lg leading-8 mb-0">
+                    Create, pin, edit, and manage notes inside a clean dashboard designed like a premium SaaS product.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="rounded-4 border border-white/10 bg-white/5 p-3 text-center">
+                        <p class="mb-1 text-slate-400 small">Status</p>
+                        <h6 class="mb-0 fw-bold text-emerald-300">Active</h6>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="rounded-4 border border-white/10 bg-white/5 p-3 text-center">
+                        <p class="mb-1 text-slate-400 small">Workspace</p>
+                        <h6 class="mb-0 fw-bold text-violet-300">Pro UI</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="row g-4">
+              <div class="col-12 col-xl-5">
+                <section class="h-100 rounded-4 border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                      <h2 class="h4 fw-bold mb-1">Create or Edit Note</h2>
+                      <p class="text-slate-400 mb-0">Write down ideas and manage them professionally.</p>
+                    </div>
+                  </div>
+
+                  <form id="noteForm" class="space-y-4">
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">Title</label>
+                      <input
+                        name="title"
+                        type="text"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none placeholder:text-slate-400"
+                        placeholder="Enter note title"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">Content</label>
+                      <textarea
+                        name="content"
+                        rows="7"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none placeholder:text-slate-400"
+                        placeholder="Write your note content..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div>
+                      <label class="mb-2 block text-sm font-medium text-slate-200">Tags</label>
+                      <input
+                        name="tags"
+                        type="text"
+                        class="form-control rounded-4 border-0 bg-white/10 px-4 py-3 text-white shadow-none placeholder:text-slate-400"
+                        placeholder="work, ideas, meeting"
+                      />
+                    </div>
+
+                    <div class="form-check pt-2">
+                      <input class="form-check-input" type="checkbox" id="pinNote" name="isPinned" />
+                      <label class="form-check-label text-slate-300" for="pinNote">
+                        Pin this note
+                      </label>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn w-100 rounded-4 border-0 py-3 fw-semibold text-white shadow-lg"
+                      style="background: linear-gradient(135deg, #7c3aed, #9333ea);"
+                    >
+                      Save Note
+                    </button>
+                  </form>
+                </section>
+              </div>
+
+              <div class="col-12 col-xl-7">
+                <section class="h-100 rounded-4 border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                      <h2 class="h4 fw-bold mb-1">Your Notes</h2>
+                      <p class="text-slate-400 mb-0">All notes are displayed here in a clean card layout.</p>
+                    </div>
+                  </div>
+
+                  <div id="notesGrid" class="row g-4"></div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
